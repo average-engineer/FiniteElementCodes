@@ -77,7 +77,7 @@ end
 %% Cauchy Strain Vectors
 % Differential Operator on displacement matrix
 for ii = nodes
-    B{ii} = (1/2*area)*[c(ii),0;
+    B{ii} = (1/(2*area))*[c(ii),0;
                         0,d(ii);
                         d(ii),c(ii)];
 end
