@@ -1,0 +1,40 @@
+Title Aufgabe11
+
+H Solver    Type
+Solver      1
+
+H Nodes	 ID     X			Y
+Nodes    1      0.0         0.0      
+Nodes    2      100.0       0.0
+Nodes    3      200.0       0.0
+
+H Elements	 ID	 Type	 MatID	 PropID	 N1	 N2
+Elements     1   222     1       1       1   2
+Elements     2   222     1       1       2   3
+
+H Materials	 ID     Ep
+Materials    1      70000
+
+H Properties   ID  A      I     zMax
+Properties     1   100    800   15
+
+
+H BC	NodeID	 XDir	 YDir   rZDir
+BC      1        0       0      0
+BC      3        0       0      0
+
+H Loads	 NodeID	 ForceX	 ForceY  MomentZ
+Loads    1       0.0     -150.0  -3333.3
+Loads    2       0.0     -700.0  0
+Loads    3       0.0     -150.0  3333.3
+H nDisp		 nID		 U		 V		 W		 rX		 rY		 rZ
+nDisp	         1	         0	         0	         0	         0	         0	         0
+nDisp	         2	         0	  -0.52083	         0	         0	         0	         0
+nDisp	         3	         0	         0	         0	         0	         0	         0
+
+H eStress		 eID		 eType		 eNode		 nID		 sigX		 sigY		 sigZ		 tauXY		 tauYZ		 tauZX
+eStress	         1	       222	         1	         1	    328.13	         0	         0	         0	         0	         0
+eStress	         1	       222	         2	         2	    328.13	         0	         0	         0	         0	         0
+eStress	         2	       222	         1	         2	    328.13	         0	         0	         0	         0	         0
+eStress	         2	       222	         2	         3	    328.13	         0	         0	         0	         0	         0
+

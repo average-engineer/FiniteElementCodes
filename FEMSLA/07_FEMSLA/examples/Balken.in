@@ -1,0 +1,31 @@
+Title Aufgabe11
+
+H Solver    Type
+Solver      1
+
+H Nodes	 ID     X			Y
+Nodes    1      0.0         0.0      
+Nodes    2      200.0       0.0
+Nodes    3      360.0       0.0
+
+
+H Elements	 ID	 Type	 MatID	 PropID	 N1	 N2
+Elements     1   222     1       1       1   2
+Elements     2   222     2       1       2   3
+
+
+H Materials	 ID     Ep
+Materials    1      210000
+Materials    2      70000
+
+H Properties   ID  A      I     zMax
+Properties     1  400    13333     10
+
+H BC	NodeID	 XDir	 YDir   rZDir
+BC      1        0       0      0
+BC      3        i       i      i
+
+H Loads	 NodeID	 ForceX	 ForceY  MomentZ
+Loads    1       0.0     -1700.0  -53333.3
+Loads    2       0.0     -2100.0   25333.3
+Loads    3       0.0     -800.0    21333.3

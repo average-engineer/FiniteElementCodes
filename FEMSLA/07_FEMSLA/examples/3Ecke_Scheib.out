@@ -1,0 +1,47 @@
+Title Scheibe Uebung 3 Last II
+
+H Solver    Type
+Solver      1
+
+H Nodes	 ID     X			Y           Z
+Nodes    1      0.0         0.0          0.0
+Nodes    2      100.0       0.0          0.0
+Nodes    3      100.0       100.0        0.0
+Nodes    4      0.0         100.0        0.0
+
+
+H Elements	 ID	  Type	 MatID	 PropID	 N1	 N2  N3  
+Elements     1    332     1       1       1   2  3    
+Elements     2    332     1       1       1   3  4   
+
+H Materials	 ID     Ep       Es      nue    Gq      phi
+Materials    1      70000    70000   0.3    27000   0
+
+H Properties    ID  t
+Properties      1   2
+
+H BC	NodeID	 XDir	 YDir   
+BC      1        0       0      
+BC      2        0       0      
+BC      3        0       i      
+BC      4        0       i      
+       
+
+H Loads	 NodeID	 ForceX	 ForceY  
+Loads    4       -12990.38     -7500.0
+
+
+H nDisp		 nID		 U		 V		 W		 rX		 rY		 rZ
+nDisp	         1	         0	         0	         0	         0	         0	         0
+nDisp	         2	         0	         0	         0	         0	         0	         0
+nDisp	         3	         0	 -0.023329	         0	         0	         0	         0
+nDisp	         4	         0	 -0.083813	         0	         0	         0	         0
+
+H eStress		 eID		 eType		 eNode		 nID		 sigX		 sigY		 sigZ		 tauXY		 tauYZ		 tauZX
+eStress	         1	       332	         1	         1	   -3.7686	   -16.331	         0	         0	         0	         0
+eStress	         1	       332	         2	         2	   -3.7686	   -16.331	         0	         0	         0	         0
+eStress	         1	       332	         3	         3	   -3.7686	   -16.331	         0	         0	         0	         0
+eStress	         2	       332	         1	         1	   -13.539	   -58.669	         0	    16.331	         0	         0
+eStress	         2	       332	         2	         3	   -13.539	   -58.669	         0	    16.331	         0	         0
+eStress	         2	       332	         3	         4	   -13.539	   -58.669	         0	    16.331	         0	         0
+
